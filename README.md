@@ -1,4 +1,4 @@
-# ov-trt-bench
+# OpenVINO-TensorRT-Benchmarking
 Convert and Benchmark InceptionV3, 2D U-Net Tensorflow/Keras models to OpenVINO and TensorRT.
 
 ## OpenVINO Benchmarking
