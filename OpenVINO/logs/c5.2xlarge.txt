@@ -1,0 +1,180 @@
+Welcome to Ubuntu 18.04.3 LTS (GNU/Linux 4.15.0-1057-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Wed Feb 26 00:45:18 UTC 2020
+
+  System load:  0.81              Processes:              186
+  Usage of /:   5.7% of 29.02GB   Users logged in:        1
+  Memory usage: 2%                IP address for ens5:    172.31.1.74
+  Swap usage:   0%                IP address for docker0: 172.17.0.1
+
+
+54 packages can be updated.
+32 updates are security updates.
+
+
+Last login: Wed Feb 26 00:44:39 2020 from 134.134.139.76
+ubuntu@ip-172-31-1-74:~$ docker run --rm rpanchum/ovbench:latest /root/bench.sh
+Unable to find image 'rpanchum/ovbench:latest' locally
+latest: Pulling from rpanchum/ovbench
+7413c47ba209: Pull complete
+0fe7e7cbb2e8: Pull complete
+1d425c982345: Pull complete
+344da5c95cec: Pull complete
+5ddf9f77b362: Pull complete
+925bf54377d5: Pull complete
+8fc61cac2cbc: Pull complete
+78de591ed527: Pull complete
+3fbcdaf4474c: Pull complete
+6c4891eca66c: Pull complete
+cff1bb81c522: Pull complete
+Digest: sha256:21a4aa6d318f97f4b1c5040ca8e691ef10cb18e0724d454e1c714492ef791c26
+Status: Downloaded newer image for rpanchum/ovbench:latest
+[setupvars.sh] OpenVINO environment initialized
+
+****************
+ CPU Info
+****************
+
+Architecture:        x86_64
+CPU op-mode(s):      32-bit, 64-bit
+Byte Order:          Little Endian
+CPU(s):              8
+On-line CPU(s) list: 0-7
+Thread(s) per core:  2
+Core(s) per socket:  4
+Socket(s):           1
+NUMA node(s):        1
+Vendor ID:           GenuineIntel
+CPU family:          6
+Model:               85
+Model name:          Intel(R) Xeon(R) Platinum 8275CL CPU @ 3.00GHz
+Stepping:            7
+CPU MHz:             3600.268
+BogoMIPS:            5999.99
+Hypervisor vendor:   KVM
+Virtualization type: full
+L1d cache:           32K
+L1i cache:           32K
+L2 cache:            1024K
+L3 cache:            36608K
+NUMA node0 CPU(s):   0-7
+Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rd tscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic mo vbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single pti fsgsbase tsc_adjust bmi1 avx2 smep  bmi2 erms invpcid mpx avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves ida arat pku osp ke
+
+****************
+ Memory Info
+****************
+
+              total        used        free      shared  buff/cache   available
+Mem:            15G        322M         11G        804K        3.0G         14G
+Swap:            0B          0B          0B
+
+****************
+ GCC Info
+****************
+
+Using built-in specs.
+COLLECT_GCC=gcc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 7.4.0-1ubuntu1~18.04.1' --with-bugurl=file:///usr/share/doc/gcc-7/README.Bugs --ena ble-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-7 --program-prefix=x86_64-lin ux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enabl e-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-uni que-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc -gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=ge neric --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --targe t=x86_64-linux-gnu
+Thread model: posix
+gcc version 7.4.0 (Ubuntu 7.4.0-1ubuntu1~18.04.1)
+
+****************
+ Python Info
+****************
+
+Python 3.6.9
+
+****************
+ Pip Packages
+****************
+
+DEPRECATION: The default format will switch to columns in the future. You can use --format=(legacy|columns) (or define a format=(legacy|columns) i n your pip.conf under the [list] section) to disable this warning.
+certifi (2019.11.28)
+chardet (3.0.4)
+decorator (4.4.1)
+defusedxml (0.6.0)
+idna (2.9)
+networkx (2.4)
+numpy (1.18.1)
+pip (9.0.1)
+progress (1.5)
+protobuf (3.6.1)
+PyYAML (5.3)
+requests (2.23.0)
+setuptools (39.0.1)
+six (1.14.0)
+urllib3 (1.25.8)
+virtualenv (15.1.0)
+
+****************
+ Benchmarking InceptionV3
+****************
+
+[Step 1/11] Parsing and validating input arguments
+[Step 2/11] Loading Inference Engine
+[ INFO ] InferenceEngine:
+         API version............. 2.1.37988
+[ INFO ] Device info
+         CPU
+         MKLDNNPlugin............ version 2.1
+         Build................... 37988
+
+[Step 3/11] Reading the Intermediate Representation network
+[Step 4/11] Resizing network to match image sizes and given batch
+[ INFO ] Network batch size: 1, precision: MIXED
+[Step 5/11] Configuring input of the model
+[Step 6/11] Setting device configuration
+[Step 7/11] Loading the model to the device
+[Step 8/11] Setting optimal runtime parameters
+[Step 9/11] Creating infer requests and filling input blobs with images
+[ INFO ] Network input 'input_1' precision U8, dimensions (NCHW): 1 3 299 299
+[ WARNING ] No input files were given: all inputs will be filled with random values!
+[ INFO ] Infer Request 0 filling
+[ INFO ] Fill input 'input_1' with random values (image is expected)
+[Step 10/11] Measuring performance (Start inference asyncronously, 1 inference requests using 1 streams for CPU, limits: 60000 ms duration)
+[Step 11/11] Dumping statistics report
+Count:      2687 iterations
+Duration:   60050.49 ms
+Latency:    22.02 ms
+Throughput: 44.75 FPS
+
+****************
+ Benchmarking 2D U-Net
+****************
+
+[Step 1/11] Parsing and validating input arguments
+[Step 2/11] Loading Inference Engine
+[ INFO ] InferenceEngine:
+         API version............. 2.1.37988
+[ INFO ] Device info
+         CPU
+         MKLDNNPlugin............ version 2.1
+         Build................... 37988
+
+[Step 3/11] Reading the Intermediate Representation network
+[Step 4/11] Resizing network to match image sizes and given batch
+[ INFO ] Network batch size: 1, precision: MIXED
+[Step 5/11] Configuring input of the model
+[Step 6/11] Setting device configuration
+[Step 7/11] Loading the model to the device
+[Step 8/11] Setting optimal runtime parameters
+[Step 9/11] Creating infer requests and filling input blobs with images
+[ INFO ] Network input 'MRImages' precision FP32, dimensions (NCHW): 1 4 160 160
+[ WARNING ] No input files were given: all inputs will be filled with random values!
+[ INFO ] Infer Request 0 filling
+[ INFO ] Fill input 'MRImages' with random values (some binary data is expected)
+[Step 10/11] Measuring performance (Start inference asyncronously, 1 inference requests using 1 streams for CPU, limits: 60000 ms duration)
+[Step 11/11] Dumping statistics report
+Count:      2663 iterations
+Duration:   60068.53 ms
+Latency:    22.24 ms
+Throughput: 44.33 FPS
+ubuntu@ip-172-31-1-74:~$
